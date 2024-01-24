@@ -41,6 +41,10 @@ end
 gem 'rack-attack'
 gem 'rack-cors'
 
+# Omniauth for Azure authentication
+gem 'omniauth-azure-activedirectory-v2'
+gem 'omniauth-rails_csrf_protection'
+
 # OSX: ../src/utils.h:33:10: fatal error: 'climits' file not found
 # From:
 # # 1. Install v8 ourselves

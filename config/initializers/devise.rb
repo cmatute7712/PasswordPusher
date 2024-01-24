@@ -316,4 +316,9 @@ Devise.setup do |config|
   # https://github.com/heartcombo/devise/wiki/How-To:-Upgrade-to-Devise-4.9.0-[Hotwire-Turbo-integration]
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
+
+  # Configure the OmniAuth provider
+  config.omniauth :azure_activedirectory_v2,
+  client_id: Rails.application.credentials.dig(:microsoft_oauth, :client_id),
+  client_secret: Rails.application.credentials.dig(:microsoft_oauth, :client_secret)
 end
